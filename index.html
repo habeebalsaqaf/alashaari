@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>د. عبدالمجيد أمين الجابري | طبيب عام - ملف شخصي فاخر</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Almarai & Tajawal -->
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Animate On Scroll (AOS) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        :root {
+            --primary: #0284c7;
+            --secondary: #0f172a;
+            --accent: #38bdf8;
+        }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #fdfeff;
+        }
+        .font-medical { font-family: 'Almarai', sans-serif; }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent),
+                        radial-gradient(circle at bottom left, rgba(2, 132, 199, 0.05), transparent);
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .floating-blob {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(2, 132, 199, 0.2));
+            filter: blur(60px);
+            border-radius: 50%;
+            z-index: -1;
+            animation: float 10s infinite alternate;
+        }
+
+        @keyframes float {
+            from { transform: translate(0, 0); }
+            to { transform: translate(40px, 40px); }
+        }
+
+        /* Mobile Menu Toggle */
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.open {
+            max-height: 400px;
+        }
+    </style>
+</head>
+<body class="text-slate-900 selection:bg-blue-100">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-[100] glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-sky-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-sky-200">
+                        <i data-lucide="stethoscope" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xl md:text-2xl font-bold text-slate-800 font-medical tracking-tight">د. عبدالمجيد أمين الجابري</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#home" class="text-slate-600 hover:text-sky-600 font-medium transition-colors">الرئيسية</a>
+                    <a href="#about" class="text-slate-600 hover:text-sky-600 font-medium transition-colors">عني</a>
+                    <a href="#skills" class="text-slate-600 hover:text-sky-600 font-medium transition-colors">المهارات</a>
+                    <a href="#experience" class="text-slate-600 hover:text-sky-600 font-medium transition-colors">المسيرة</a>
+                    <a href="#contact" class="bg-slate-900 text-white px-7 py-2.5 rounded-full hover:bg-sky-700 transition-all shadow-lg hover:shadow-sky-100">اتصل بي</a>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button class="md:hidden p-2 text-slate-700" onclick="toggleMenu()">
+                    <i data-lucide="menu" id="menu-icon"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden flex flex-col gap-4 pb-6 px-2">
+                <a href="#home" class="text-slate-600 font-medium py-2" onclick="toggleMenu()">الرئيسية</a>
+                <a href="#about" class="text-slate-600 font-medium py-2" onclick="toggleMenu()">عني</a>
+                <a href="#skills" class="text-slate-600 font-medium py-2" onclick="toggleMenu()">المهارات</a>
+                <a href="#contact" class="bg-sky-600 text-white text-center py-3 rounded-xl mt-2" onclick="toggleMenu()">اتصل بي</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center hero-gradient pt-20 overflow-hidden">
+        <div class="floating-blob top-20 left-10"></div>
+        <div class="floating-blob bottom-20 right-10" style="animation-delay: -5s;"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="order-2 lg:order-1" data-aos="fade-left" data-aos-duration="1000">
+                <div class="inline-flex items-center gap-2 bg-sky-50 text-sky-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+                    </span>
+                    متاح للاستشارات الطبية
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-extrabold text-slate-900 mb-6 font-medical leading-[1.15]">
+                    نعتني بصحتك <br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-800">بأساليب حديثة</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl">
+                    د. عبدالمجيد أمين الجابري، طبيب ممارس عام متخصص في الطب الشمولي والوقائي. نجمع بين الخبرة الإكلينيكية والتعاطف الإنساني لتقديم رحلة علاجية متكاملة.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-5">
+                    <button class="flex items-center justify-center gap-3 bg-sky-600 text-white px-10 py-5 rounded-2xl hover:bg-sky-700 transition-all shadow-2xl shadow-sky-200 font-bold group">
+                        <span>تحميل السيرة الذاتية</span>
+                        <i data-lucide="arrow-down-to-line" class="w-5 h-5 group-hover:translate-y-1 transition-transform"></i>
+                    </button>
+                    <a href="#contact" class="flex items-center justify-center gap-3 bg-white text-slate-700 border border-slate-200 px-10 py-5 rounded-2xl hover:bg-slate-50 transition-all font-bold">
+                        <span>احجز موعداً</span>
+                        <i data-lucide="calendar" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2 relative" data-aos="fade-right" data-aos-duration="1000">
+                <div class="relative z-10 w-full max-w-[500px] mx-auto">
+                    <!-- Image Wrapper -->
+                    <div class="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-[0_40px_80px_-15px_rgba(0,0,0,0.15)] border-[12px] border-white relative">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=800" alt="Dr. Mohammed" class="w-full h-full object-cover">
+                        <!-- Glass Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-sky-900/40 to-transparent"></div>
+                    </div>
+                    <!-- Stats Card -->
+                    <div class="absolute -bottom-10 -left-6 md:-left-12 bg-white/90 backdrop-blur-md p-6 rounded-[2rem] shadow-2xl border border-white/50 z-20 hidden sm:block" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-sky-100 p-4 rounded-2xl text-sky-600">
+                                <i data-lucide="users" class="w-8 h-8"></i>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-black text-slate-800 tracking-tight">+1500</p>
+                                <p class="text-sm text-slate-500 font-medium">مريض سعيد</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="about" class="py-32 bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
+                <h2 class="text-sky-600 font-bold uppercase tracking-[0.2em] text-sm mb-4">لماذا تختارنا؟</h2>
+                <h3 class="text-4xl md:text-5xl font-black text-slate-900 font-medical">رعاية طبية تضع المريض في المقام الأول</h3>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 mb-8">
+                        <i data-lucide="clipboard-list" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-4">تشخيص دقيق</h4>
+                    <p class="text-slate-500 leading-relaxed">نستخدم أحدث التقنيات الطبية والتحاليل المخبرية لضمان تشخيص دقيق وشامل لحالتك الصحية.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 card-hover shadow-xl shadow-blue-50/50" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-sky-50 rounded-2xl flex items-center justify-center text-sky-600 mb-8">
+                        <i data-lucide="heart-pulse" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-4">طب وقائي</h4>
+                    <p class="text-slate-500 leading-relaxed">تركيزنا لا يقتصر على العلاج فقط، بل نهتم بوضع خطط وقائية تحميك من الأمراض المستقبلية.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 mb-8">
+                        <i data-lucide="clock" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-4">متابعة مستمرة</h4>
+                    <p class="text-slate-500 leading-relaxed">نظام متابعة ذكي يضمن تواصل الطبيب مع المريض حتى بعد انتهاء فترة العلاج لضمان التعافي.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-20 items-center">
+            <div data-aos="fade-left">
+                <h2 class="text-4xl font-black text-slate-900 mb-8 font-medical leading-tight">الخبرات والمهارات <br/><span class="text-sky-600 underline decoration-sky-100 underline-offset-8">الإكلينيكية</span></h2>
+                <p class="text-lg text-slate-600 mb-10 leading-relaxed">
+                    من خلال سنوات من الممارسة في مختلف الأقسام الطبية، اكتسبت مهارات متقدمة تضمن تقديم رعاية صحية آمنة وفقاً للمعايير الدولية.
+                </p>
+                <div class="space-y-8">
+                    <!-- Progress Item -->
+                    <div class="space-y-3">
+                        <div class="flex justify-between font-bold text-slate-800">
+                            <span>الطب الباطني</span>
+                            <span class="text-sky-600">98%</span>
+                        </div>
+                        <div class="h-3 bg-slate-100 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-sky-400 to-sky-600 rounded-full w-[98%]" data-aos="slide-left" data-aos-duration="1500"></div>
+                        </div>
+                    </div>
+                    <!-- Progress Item -->
+                    <div class="space-y-3">
+                        <div class="flex justify-between font-bold text-slate-800">
+                            <span>طب الطوارئ والحوادث</span>
+                            <span class="text-sky-600">92%</span>
+                        </div>
+                        <div class="h-3 bg-slate-100 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-sky-400 to-sky-600 rounded-full w-[92%]" data-aos="slide-left" data-aos-duration="1500" data-aos-delay="200"></div>
+                        </div>
+                    </div>
+                    <!-- Progress Item -->
+                    <div class="space-y-3">
+                        <div class="flex justify-between font-bold text-slate-800">
+                            <span>المهارات الجراحية البسيطة</span>
+                            <span class="text-sky-600">85%</span>
+                        </div>
+                        <div class="h-3 bg-slate-100 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-sky-400 to-sky-600 rounded-full w-[85%]" data-aos="slide-left" data-aos-duration="1500" data-aos-delay="400"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative" data-aos="zoom-in">
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="space-y-6 pt-12">
+                        <div class="bg-blue-600 p-8 rounded-[2rem] text-white shadow-xl shadow-blue-200">
+                            <i data-lucide="award" class="w-10 h-10 mb-4 opacity-80"></i>
+                            <p class="text-xl font-bold">بورد طبي</p>
+                            <p class="text-sm opacity-70">مرخص من وزارة الصحة</p>
+                        </div>
+                        <div class="bg-slate-100 p-8 rounded-[2rem] text-slate-800">
+                            <i data-lucide="languages" class="w-10 h-10 mb-4 text-sky-600"></i>
+                            <p class="text-xl font-bold">ثنائي اللغة</p>
+                            <p class="text-sm text-slate-500">العربية والإنجليزية</p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-slate-900 p-8 rounded-[2rem] text-white">
+                            <i data-lucide="brain" class="w-10 h-10 mb-4 text-sky-400"></i>
+                            <p class="text-xl font-bold">ذكاء عاطفي</p>
+                            <p class="text-sm opacity-70">تعامل إنساني مع المرضى</p>
+                        </div>
+                        <div class="bg-sky-500 p-8 rounded-[2rem] text-white shadow-xl shadow-sky-200">
+                            <i data-lucide="stethoscope" class="w-10 h-10 mb-4 opacity-80"></i>
+                            <p class="text-xl font-bold">خبرة 5+ سنوات</p>
+                            <p class="text-sm opacity-80">ممارسة مهنية مكثفة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="py-32 bg-slate-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 font-medical">الخط الزمني المهني</h2>
+            </div>
+
+            <div class="relative max-w-4xl mx-auto">
+                <div class="absolute right-1/2 translate-x-1/2 w-0.5 h-full bg-slate-200 hidden md:block"></div>
+                
+                <!-- Item 1 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-20 group" data-aos="fade-right">
+                    <div class="md:w-[45%] bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm group-hover:shadow-xl transition-all">
+                        <span class="text-sky-600 font-bold mb-2 inline-block">2023 - اليوم</span>
+                        <h4 class="text-xl font-bold text-slate-900">طبيب عام أول</h4>
+                        <p class="text-slate-500 text-sm mb-4">مجموعة الحبيب الطبية</p>
+                        <p class="text-slate-600">الإشراف على الحالات المعقدة وتطوير بروتوكولات الرعاية الأولية.</p>
+                    </div>
+                    <div class="absolute right-1/2 translate-x-1/2 w-4 h-4 rounded-full bg-sky-600 border-4 border-white shadow-md hidden md:block"></div>
+                    <div class="md:w-[45%]"></div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-20 group" data-aos="fade-left">
+                    <div class="md:w-[45%] order-2 md:order-1"></div>
+                    <div class="absolute right-1/2 translate-x-1/2 w-4 h-4 rounded-full bg-slate-400 border-4 border-white shadow-md hidden md:block"></div>
+                    <div class="md:w-[45%] order-1 md:order-2 bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm group-hover:shadow-xl transition-all">
+                        <span class="text-sky-600 font-bold mb-2 inline-block">2021 - 2023</span>
+                        <h4 class="text-xl font-bold text-slate-900">طبيب مقيم - قسم الباطنية</h4>
+                        <p class="text-slate-500 text-sm mb-4">مستشفى القوات المسلحة</p>
+                        <p class="text-slate-600">التدريب المكثف على حالات السكري، الضغط، وأمراض القلب الشائعة.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-20 group" data-aos="fade-right">
+                    <div class="md:w-[45%] bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm group-hover:shadow-xl transition-all">
+                        <span class="text-sky-600 font-bold mb-2 inline-block">2020 - 2021</span>
+                        <h4 class="text-xl font-bold text-slate-900">طبيب امتياز</h4>
+                        <p class="text-slate-500 text-sm mb-4">مستشفى الملك فهد الجامعي</p>
+                        <p class="text-slate-600">سنة التدريب الإجباري مع التدوير في جميع التخصصات الرئيسية.</p>
+                    </div>
+                    <div class="absolute right-1/2 translate-x-1/2 w-4 h-4 rounded-full bg-slate-300 border-4 border-white shadow-md hidden md:block"></div>
+                    <div class="md:w-[45%]"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-32 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="bg-slate-900 rounded-[4rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl">
+                <!-- Info Side -->
+                <div class="lg:w-1/3 p-12 md:p-16 bg-gradient-to-br from-sky-600 to-blue-800 text-white flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-6">احصل على استشارة</h3>
+                        <p class="text-sky-100 mb-12">نحن هنا للإجابة على جميع استفساراتك الصحية. فريقنا سيتواصل معك في أقل من 24 ساعة.</p>
+                        
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-5">
+                                <div class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center shrink-0">
+                                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold">العنوان</p>
+                                    <p class="text-sky-100 text-sm">حي المروج، الرياض، المملكة العربية السعودية</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-5">
+                                <div class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center shrink-0">
+                                    <i data-lucide="mail" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold">البريد الإلكتروني</p>
+                                    <p class="text-sky-100 text-sm">contact@drmohammed.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-20 flex gap-4">
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center hover:bg-white/20 transition-all"><i data-lucide="linkedin"></i></a>
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center hover:bg-white/20 transition-all"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center hover:bg-white/20 transition-all"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Form Side -->
+                <div class="lg:w-2/3 p-12 md:p-16 bg-white">
+                    <form action="#" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-3">
+                            <label class="font-bold text-slate-700">الاسم الكامل</label>
+                            <input type="text" placeholder="مثلاً: محمد السعيد" class="w-full bg-slate-50 border border-slate-100 px-6 py-4 rounded-2xl focus:ring-4 focus:ring-sky-100 focus:border-sky-500 transition-all outline-none">
+                        </div>
+                        <div class="space-y-3">
+                            <label class="font-bold text-slate-700">رقم الهاتف</label>
+                            <input type="tel" dir="ltr" placeholder="+966 5X XXX XXXX" class="w-full bg-slate-50 border border-slate-100 px-6 py-4 rounded-2xl focus:ring-4 focus:ring-sky-100 focus:border-sky-500 transition-all outline-none text-left">
+                        </div>
+                        <div class="md:col-span-2 space-y-3">
+                            <label class="font-bold text-slate-700">الموضوع</label>
+                            <select class="w-full bg-slate-50 border border-slate-100 px-6 py-4 rounded-2xl focus:ring-4 focus:ring-sky-100 focus:border-sky-500 transition-all outline-none appearance-none">
+                                <option>استشارة طبية عامة</option>
+                                <option>حجز موعد عيادة</option>
+                                <option>استفسار عن الفحوصات</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2 space-y-3">
+                            <label class="font-bold text-slate-700">تفاصيل الرسالة</label>
+                            <textarea rows="4" placeholder="كيف يمكنني مساعدتك اليوم؟" class="w-full bg-slate-50 border border-slate-100 px-6 py-4 rounded-2xl focus:ring-4 focus:ring-sky-100 focus:border-sky-500 transition-all outline-none resize-none"></textarea>
+                        </div>
+                        <div class="md:col-span-2 pt-4">
+                            <button type="submit" class="w-full bg-slate-900 text-white font-bold py-5 rounded-2xl hover:bg-sky-600 transition-all shadow-xl hover:shadow-sky-100 flex items-center justify-center gap-3 group">
+                                <span>إرسال الطلب</span>
+                                <i data-lucide="send" class="w-5 h-5 group-hover:translate-x-[-4px] transition-transform"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 py-20 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-center">
+            <div class="flex items-center gap-3 mb-10">
+                <div class="w-10 h-10 bg-sky-600 rounded-xl flex items-center justify-center text-white">
+                    <i data-lucide="stethoscope" class="w-6 h-6"></i>
+                </div>
+                <span class="text-2xl font-bold text-slate-900 font-medical tracking-tight">د. عبدالمجيد أمين الجابري</span>
+            </div>
+            
+            <nav class="flex flex-wrap justify-center gap-8 md:gap-16 mb-12">
+                <a href="#home" class="text-slate-500 hover:text-sky-600 font-medium transition-colors">الرئيسية</a>
+                <a href="#about" class="text-slate-500 hover:text-sky-600 font-medium transition-colors">عني</a>
+                <a href="#experience" class="text-slate-500 hover:text-sky-600 font-medium transition-colors">المسيرة المهنية</a>
+                <a href="#contact" class="text-slate-500 hover:text-sky-600 font-medium transition-colors">تواصل معنا</a>
+            </nav>
+
+            <div class="w-full border-t border-slate-200 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-400">
+                <p>© 2024 جميع الحقوق محفوظة - د. عبدالمجيد أمين الجابري</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-slate-600">سياسة الخصوصية</a>
+                    <a href="#" class="hover:text-slate-600">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+        
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            duration: 800,
+            offset: 100
+        });
+
+        // Mobile Menu Logic
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('open');
+            
+            if(menu.classList.contains('open')) {
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('py-1', 'shadow-xl');
+                nav.classList.remove('py-2');
+            } else {
+                nav.classList.remove('py-1', 'shadow-xl');
+                nav.classList.add('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
